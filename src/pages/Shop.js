@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { datProduct } from "../data";
-import { addToCart } from "../redux/actions/cartActions";
+import { addToCart } from "../redux/reducers/cartReducer";
 import {
   detailProduct,
   filterProducts,

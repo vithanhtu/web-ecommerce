@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
+import productImgDefault from "../image/product-3.jpg.webp";
 import Products from "../components/Products";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/actions/cartActions";
-import productImgDefault from "../image/product-3.jpg.webp";
+import { addToCart } from "../redux/reducers/cartReducer";
 import { sliderProductDetails } from "../data";
 
 const Details = () => {
