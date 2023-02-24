@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
   addToCart,
-  countCartItems,
-  removeCartItems,
+  itemsCart,
+  removeItemCart,
   statusCart,
-} from "../redux/actions/cartActions";
+} from "../redux/reducers/cartReducer";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -15,10 +15,6 @@ const Cart = () => {
     (init, current) => init + current.qty * current.price,
     0
   );
-
-  // const handleDecreasePrice = (params) => {
-  //   console.log(params)
-  // }
 
   return (
     <div>
@@ -101,7 +97,7 @@ const Cart = () => {
                                       <button
                                         className="bg-red-500 px-2 text-white text-md"
                                         onClick={() =>
-                                          dispatch(countCartItems(product.id))
+                                          dispatch(itemsCart(product.id))
                                         }
                                       >
                                         {" "}
@@ -124,7 +120,7 @@ const Cart = () => {
                                     <div className="flex">
                                       <button
                                         onClick={() =>
-                                          dispatch(removeCartItems(product.id))
+                                          dispatch(removeItemCart(product.id))
                                         }
                                         type="button"
                                         className="font-medium text-indigo-600 hover:text-indigo-500"

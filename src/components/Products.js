@@ -2,14 +2,14 @@ import React from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 import {
   detailProduct,
   statusProducts,
   filterNewProducts,
   filterCategories,
 } from "../redux/reducers/productsReducer";
-import { Link, useLocation } from "react-router-dom";
-import { addToCart } from "../redux/actions/cartActions";
+import { addToCart } from "../redux/reducers/cartReducer";
 
 const Products = ({}) => {
   const dispatch = useDispatch();
