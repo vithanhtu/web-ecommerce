@@ -71,7 +71,10 @@ const Products = ({}) => {
                     </button>
                     <Link
                       to={`/details/${product.id}`}
-                      onClick={() => dispatch(detailProduct(product.id))}
+                      onClick={() =>
+                        dispatch(detailProduct(product.id)) &&
+                        dispatch(statusProducts())
+                      }
                     >
                       <img
                         src={product.img}
