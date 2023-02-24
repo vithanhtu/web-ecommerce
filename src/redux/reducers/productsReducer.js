@@ -61,7 +61,7 @@ const productsSlice = createSlice({
     },
 
     statusProducts: (state) => {
-      state.products = [...datProduct];
+      state.newProducts = [...datProduct];
     },
   },
 });
